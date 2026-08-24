@@ -1,19 +1,8 @@
 {
-  "version": 2,
-  "builds": [
+  "rewrites": [
     {
-      "src": "package.json",
-      "use": "@vercel/node"
+      "source": "/(.*)",
+      "destination": "/index.html"
     }
-  ],
-  "routes": [
-    {
-      "src": "/(.*)",
-      "dest": "/index.html"
-    }
-  ],
-  "env": {
-    "VITE_API_URL": "https://your-backend-url.onrender.com/api",
-    "VITE_WS_URL": "wss://your-backend-url.onrender.com/ws"
-  }
+  ]
 }
